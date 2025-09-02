@@ -61,7 +61,7 @@ st.markdown(
     <div style="
         text-align: center; 
         padding: 15px; 
-        background-color: #ffecd1; 
+        background-color: #673AB7; 
         border-radius: 10px; 
         margin-top: 20px;
     ">
