@@ -8,7 +8,9 @@ from agno.models.google import Gemini
 from datetime import datetime
 
 import streamlit as st
-
+SERPAPI_KEY = st.secrets["SERPAPI_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 # Set up Streamlit UI with a travel-friendly theme
 st.set_page_config(page_title="🌍 AI Travel Planner", layout="wide")
 st.markdown(
@@ -112,9 +114,9 @@ visa_required = st.sidebar.checkbox("🛃 Check Visa Requirements")
 travel_insurance = st.sidebar.checkbox("🛡️ Get Travel Insurance")
 currency_converter = st.sidebar.checkbox("💱 Currency Exchange Rates")
 
-SERPAPI_KEY = ""
-GOOGLE_API_KEY = ""
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+# SERPAPI_KEY = ""
+# GOOGLE_API_KEY = ""
+# os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 params = {
         "engine": "google_flights",
